@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: curl -o data.json https://dummyjson.com/products/1
+      - run: cat data.json
       - run: git add data.json
       - run: git commit -m "Update"
       - run: git push
-      - run: cat data.json
