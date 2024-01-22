@@ -30,5 +30,7 @@ jobs:
           configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.API_TOKEN }}"} }'
 
       - run: git add .
+      - run: git config --global user.email "vgolosnaya@gmail.com"
+      - run: git config --global user.name "Valeryia Halasnaya"
       - run: git commit -m "update"
       - run: git push origin/main
