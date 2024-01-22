@@ -33,3 +33,4 @@ jobs:
           endpoint: https://dummyjson.com/products/1
           configuration: '{ "method": "GET" }'
           save-location: "i18n/en.json"
+          debug: true
