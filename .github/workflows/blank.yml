@@ -25,5 +25,7 @@ jobs:
       - run: curl -o data.json https://dummyjson.com/products/1
       - run: cat data.json
       - run: git add data.json
+      - run: git config --global user.email "vgolosnaya@gmail.com"
+      - run: git config --global user.name "Valeryia Halasnaya"
       - run: git commit -m "Update"
       - run: git push
