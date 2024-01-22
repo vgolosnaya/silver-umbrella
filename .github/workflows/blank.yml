@@ -20,6 +20,8 @@ jobs:
   refresh-feed:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out this repo
+        uses: actions/checkout@v4
       - run: curl -o data.json https://dummyjson.com/products/1
       - run: cat data.json
       - run: git add data.json
