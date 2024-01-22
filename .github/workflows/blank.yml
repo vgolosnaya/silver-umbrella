@@ -29,7 +29,7 @@ jobs:
         uses: JamesIves/fetch-api-data-action@v2
         with:
           endpoint: https://dummyjson.com/products/1
-          configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.API_TOKEN }}"} }'
+          configuration: '{ "method": "GET" }'
 
       - name: Build and Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
