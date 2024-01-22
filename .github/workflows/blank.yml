@@ -10,6 +10,8 @@ on:
   repository_dispatch:
     types:
       - webhook
+permissions:   # Job-level permissions configuration starts here
+  contents: write
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
