@@ -32,5 +32,5 @@ jobs:
         with:
           endpoint: https://dummyjson.com/products/1
           configuration: '{ "method": "GET" }'
-          save-location: "i18n/en.json"
+          save-location: "i18n"
           debug: true
