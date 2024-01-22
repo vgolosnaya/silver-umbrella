@@ -31,8 +31,9 @@ jobs:
           endpoint: https://dummyjson.com/products/1
           configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.API_TOKEN }}"} }'
 
-      - run: git add .
-      - run: git config --global user.email "vgolosnaya@gmail.com"
-      - run: git config --global user.name "Valeryia Halasnaya"
-      - run: git commit -m "update"
-      - run: git push
+      - name: Build and Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main # Pushes the updates to the main branch.
+          folder: fetch-api-data-action # The location of the data.json file saved by the Fetch API Data action.
+          target-folder: data # Saves the data into the 'data' directory on the main branch.
