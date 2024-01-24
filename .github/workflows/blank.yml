@@ -26,9 +26,9 @@ jobs:
       - name: Check out this repo
         uses: actions/checkout@v4
       - run: curl -o data.json https://dummyjson.com/products/1
-      - run: cat data.json
-      - run: git add data.json
+      - run: cat data1.json
+      - run: git add data1.json
       - run: git config --global user.email "vgolosnaya@gmail.com"
       - run: git config --global user.name "Valeryia Halasnaya"
-      - run: git commit -m ${{ steps.date.outputs.date }}
+      - run: git commit -m "auto:(test):${{ steps.date.outputs.date }}"
       - run: git push
