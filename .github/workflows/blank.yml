@@ -25,7 +25,7 @@ jobs:
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Check out this repo
         uses: actions/checkout@v4
-      - run: curl -o data.json https://dummyjson.com/products/1
+      - run: curl -o data1.json https://dummyjson.com/products/1
       - run: cat data1.json
       - run: git add data1.json
       - run: git config --global user.email "vgolosnaya@gmail.com"
